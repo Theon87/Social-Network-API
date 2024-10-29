@@ -39,3 +39,29 @@ export const createUser = async(req: Request, res: Response) => {
         res.status(500).json(err);
     }
 }
+
+// delete a user
+export const deleteUser = async(req: Request, res: Response) => {
+    try {
+        const user = await User.findOneAndDelete({ _id: req.params.userId });
+        if (!user) {
+            res.status(404).json({ message: 'User not found' });
+            return;
+        }
+
+        const thought = await Thought.findOneAndUpdate(
+            { user: req.params.userId },
+            { $pull: { users: req.params.userId } },
+            { new: true }
+        );
+
+        if (!thought) {
+            res.status(404).json({ message: 'User deleted, but no thoughts found' });
+            return;
+        }
+
+        res.json({ message: 'User deleted' });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+}
