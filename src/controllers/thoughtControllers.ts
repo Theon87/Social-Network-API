@@ -9,7 +9,7 @@ export const getAllThoughts = async(_req: Request, res: Response) => {
     } catch (err) {
         res.status(500).json(err);
     }
-}
+};
 
 // get a thought by id
 export const getThoughtById = async (req: Request, res: Response) => {
@@ -29,3 +29,26 @@ export const getThoughtById = async (req: Request, res: Response) => {
         });
     }
 };
+
+// update a thought
+export const updateThought = async (req: Request, res: Response) => {
+    try {
+      const thought = await Thought.findOneAndUpdate(
+        { _id: req.params.thoughtId },
+        { $set: req.body },
+        { runValidators: true, new: true }
+      );
+
+      if (!thought) {
+        return res.status(404).json({ message: 'No thought with this id!' });
+      }
+
+      res.json(thought);
+      return;
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+      return;
+    }
+};
+
