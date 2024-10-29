@@ -1,30 +1,38 @@
-# A Social Network API
+# Social Network API
 
 ## Description
 
-This is a social network web application where users can share their thoughts, react to friends' thoughts, and create a friend list. 
+This app showcases how the Express.js, MongoDB, and the Mongoose ODM can combine to create a responsive social network experience. Here, a social network web application where users can share their thoughts, react to friends' thoughts, and create a friend list is demonstrated.
 
-<!-- Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn? -->
-
-## Table of Contents (Optional)
-
-<!-- If your README is long, add a table of contents to make it easy for users to find what they need.
+## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
-- [License](#license) -->
+- [License](#license)
+- [Features](#features)
+- [How to Contribute](#how-to-contribute)
 
 ## Installation
 
-<!-- What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running. -->
+To use this application, you must install the following;
+
+1) VS Code
+2) MongoDB
+3) Mongoose ODM
+4) Node.js
+5) Express.js
+
+Do the following to install this project.
+
+1) Install the dependencies using "npm i".
+2) Run the following scripts
+    - npm run build
+    - npm start
 
 ## Usage
+
+The data on this app can be organized into users, friends, thoughts, and reactions. Test the app routes using insomnia. See the features section below to learn more about how the app works.
 
 <!-- Provide instructions and examples for use. Include screenshots as needed.
 
@@ -36,31 +44,37 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 ## Credits
 
-<!-- List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well. -->
+The following guide was used to produce this README.md document: [https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide].
 
 ## License
 
-<!-- The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-
----
-
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections. -->
-
-## Badges
-
-<!-- ![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time. -->
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Features
 
-<!-- If your project has a lot of features, list them here. -->
+- Create
+    - user
+    - thought
+    - reactions to thoughts
+- Add
+    - friend
+    - reaction
+- Find 
+    - all users
+    - user by id
+    - all thoughts
+    - thoughts by id
+- Update
+    - user
+    - thought
+- Delete 
+    - user
+    - thought
+    - reaction
+    - friend
 
 ## How to Contribute
 
-<!-- If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer. -->
+- Direct Request on GitHub [https://github.com/Theon87/social-network-api].
 
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
