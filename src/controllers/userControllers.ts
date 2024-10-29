@@ -29,3 +29,13 @@ export const getUserById = async (req: Request, res: Response) => {
         });
     }
 };
+
+// create a new user
+export const createUser = async(req: Request, res: Response) => {
+    try {
+        const user = await User.create(req.body);
+        res.json(user);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+}
