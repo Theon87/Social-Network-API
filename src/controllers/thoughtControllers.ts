@@ -52,3 +52,25 @@ export const updateThought = async (req: Request, res: Response) => {
     }
 };
 
+// create a new thought
+export const createThought = async (req: Request, res: Response) => {
+    try {
+      const thought = await Thought.create(req.body);
+      const user = await User.findOneAndUpdate(
+        { _id: req.body.userId },
+        { $addToSet: { thoughts: thought._id } },
+        { new: true }
+      );
+
+      if (!user) {
+         res
+          .status(404)
+          .json({ message: 'Thought created, but found no user with that ID' });
+        } else {  
+        res.json('Created the thought 🎉');
+         }
+        } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+}
