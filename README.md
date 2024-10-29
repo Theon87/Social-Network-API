@@ -34,14 +34,6 @@ Do the following to install this project.
 
 The data on this app can be organized into users, friends, thoughts, and reactions. Test the app routes using insomnia. See the features section below to learn more about how the app works.
 
-<!-- Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ``` -->
-
 ## Credits
 
 The following guide was used to produce this README.md document: [https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide].
@@ -51,6 +43,8 @@ The following guide was used to produce this README.md document: [https://coding
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Features
+
+Use this link for a demonstration: [https://drive.google.com/file/d/1mIlWeP9VDpVpoPEzqK-5C0ja_wOIw1wu/view?usp=sharing].
 
 - Create
     - user
